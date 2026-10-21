@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, #071728 0%, #010408 100%);
+  color: #a4e5ff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.hud-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  pointer-events: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: auto;
+}
+
+.system-status {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  color: #48cae4;
+}
+
+.glow-btn {
+  background: rgba(0, 180, 216, 0.15);
+  color: #00b4d8;
+  border: 1px solid #00b4d8;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+}
+
+#canvas-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.subtitles-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 1.5rem auto;
+  pointer-events: auto;
+}
+
+#transcript-preview {
+  color: #64748b;
+  font-style: italic;
+  font-size: 0.95rem;
+  min-height: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+#jarvis-speech {
+  color: #caf0f8;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.memory-card {
+  position: absolute;
+  right: 1.5rem;
+  top: 4.5rem;
+  width: 220px;
+  background: rgba(4, 15, 27, 0.8);
+  border: 1px solid rgba(0, 180, 216, 0.2);
+  padding: 0.8rem;
+  border-radius: 6px;
+  pointer-events: auto;
+  max-height: 45vh;
+  overflow-y: auto;
+}
+
+.memory-card h3 {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  color: #48cae4;
+}
+
+#memory-list {
+  list-style: none;
+  font-size: 0.75rem;
+}
+
+#memory-list li {
+  margin-bottom: 0.4rem;
+  background: rgba(0, 119, 182, 0.15);
+  padding: 0.3rem;
+  border-radius: 3px;
+}

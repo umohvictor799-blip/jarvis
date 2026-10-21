@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JARVIS Core</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div class="hud-overlay">
+    <header>
+      <div class="system-status">JARVIS CORE: <span id="status">STANDBY</span></div>
+      <button id="toggle-dialogue-btn" class="glow-btn">START CONVERSATION</button>
+    </header>
+
+    <div id="canvas-container"></div>
+
+    <div class="subtitles-container">
+      <p id="transcript-preview"></p>
+      <p id="jarvis-speech"></p>
+    </div>
+
+    <div class="memory-card">
+      <h3>Active Memories</h3>
+      <ul id="memory-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('sw.js'));
+    }
+  </script>
+</body>
+</html>
